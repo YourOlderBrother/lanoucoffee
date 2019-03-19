@@ -1,0 +1,19 @@
+package com.lanou.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.lanou.model.Customer;
+
+@Mapper
+public interface CustomerDao {
+	public abstract Integer addCustomer(Customer cus);
+
+	public abstract Integer updateCustomer(Customer cus);
+
+	public abstract Customer queryCustomer(Integer cusId);
+
+	public abstract List<Customer> queryAll();
+
+}

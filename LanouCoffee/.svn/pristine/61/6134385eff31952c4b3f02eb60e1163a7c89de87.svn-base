@@ -1,0 +1,29 @@
+package com.lanou.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lanou.dao.OrderDao;
+import com.lanou.model.Order;
+
+@Service
+public class OrderService {
+	@Autowired
+	private OrderDao ordDao;
+
+	public void addOrder(Order ord) {
+		ordDao.addOrder(ord);
+
+	};
+
+	public Order queryOrder(Integer ordId) {
+		return ordDao.queryOrder(ordId);
+	};
+
+	public List<Order> queryAll() {
+		return ordDao.queryAll();
+	};
+
+}

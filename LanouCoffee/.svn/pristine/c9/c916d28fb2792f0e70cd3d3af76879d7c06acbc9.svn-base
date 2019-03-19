@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>注册成功！</title>
+<script src="../JS/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<p>恭喜你，注册成功！正在跳转~~~</p>
+<script type="text/javascript">
+$(function(){
+	var a=5;
+	setInterval(function(){
+		a-=1;
+		if(a==0){
+			window.location.href='/login/home';
+		}
+	},1000);
+	
+});
+
+</script>
+
+
+</body>
+</html>

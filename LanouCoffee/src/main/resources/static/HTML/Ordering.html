@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>开始订餐</title>
+		<link rel="stylesheet" type="text/css" href="../CSS/ordering.css"/>
+	</head>
+	<body>
+		<!--导航栏-->
+		<div class="head-border">
+		<!--logo-->
+		<div class="logo-border">
+			<a href="/login/home" class="logo-link">
+				<h1 class="logo">LanouCoffee</h1>
+			</a>
+		</div>
+		<!--特色咖啡-->
+		<div class="feature-border">
+			<a href="/feature" class="feature-link">
+				<h1 class="feature">特色咖啡</h1>
+			</a>
+		</div>
+		<!--咖啡分类-->
+		<div class="menus-border">
+			<a class="menus-link">
+				<h1 class="menus">开始订餐</h1>
+			</a>
+		</div>
+		<!--个人信息-->
+		<div class="message-border">
+			<a href="/personalinfo" class="message-link">
+				<h1 class="message">个人信息</h1>
+			</a>
+		</div>
+		<!--帮助-->
+		<div class="help-border">
+			<a href="/help" class="help-link">
+				<h1 class="help">帮助</h1>
+			</a>
+		</div>
+	</div>
+		<!--中间内容-->
+		<div class="center-border">
+			<div class="big">
+			<div class="left">
+				<div class="tm1"><a>男士饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">白酒咖啡</a></div>
+						<div class="tm12"><a href="#">啤酒咖啡</a></div>
+						<div class="tm13"><a href="#">升仙咖啡</a></div>
+						<div class="tm14"><a href="#">上神咖啡</a></div>
+					</div>
+				</div>
+				<div class="tm2"><a>女士饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">果味咖啡</a></div>
+						<div class="tm12"><a href="#">无色咖啡</a></div>
+						<div class="tm13"><a href="#">无情咖啡</a></div>
+						<div class="tm14"><a href="#">多情咖啡</a></div>
+					</div>
+				</div>
+				<div class="tm3"><a>男生饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">欢乐咖啡</a></div>
+						<div class="tm12"><a href="#">有氧咖啡</a></div>
+						<div class="tm13"><a href="#">气体咖啡</a></div>
+						<div class="tm14"><a href="#">无血咖啡</a></div>
+					</div>
+				</div>
+				<div class="tm4"><a>女生饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">优雅咖啡</a></div>
+						<div class="tm12"><a href="#">自爱咖啡</a></div>
+						<div class="tm13"><a href="#">萌萌咖啡</a></div>
+						<div class="tm14"><a href="#">乐乐咖啡</a></div>
+					</div>
+				</div>
+				<div class="tm5"><a>小孩饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">蹦哒哒</a></div>
+						<div class="tm12"><a href="#">乐高高</a></div>
+						<div class="tm13"><a href="#">笑甜甜</a></div>
+						<div class="tm14"><a href="#">萌暖暖</a></div>
+					</div>
+				</div>
+				<div class="tm6"><a>老人饮品</a>
+					<div class="one">
+						<div class="tm11"><a href="#">沉稳咖啡</a></div>
+						<div class="tm12"><a href="#">闲情咖啡</a></div>
+						<div class="tm13"><a href="#">急躁咖啡</a></div>
+						<div class="tm14"><a href="#">坟墓咖啡</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="d1">LanouCoffee</div>
+		<table border="1px" bordercolor="#D5D5D5" cellpadding="10px" cellspacing="0" align="center">
+			<thead>
+				<tr>
+					<th width="200px">商品</th>
+					<th width="100px">单价(元)</th>
+					<th width="100px">颜色</th>
+					<th width="100px">库存</th>
+					<th width="100px">好评率</th>
+					<th width="100px">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>猫屎咖啡</td>
+					<td>80</td>
+					<td>黑色</td>
+					<td>893</td>
+					<td>98%</td>
+					<td><input type="button" value="加入购物车" onclick="b1()" /></td>
+				</tr>
+				<tr>
+					<td>麝香咖啡</td>
+					<td>150</td>
+					<td>黑色</td>
+					<td>9028</td>
+					<td>96%</td>
+					<td><input type="button" value="加入购物车" onclick="b2()" /></td>
+				</tr>
+				<tr>
+					<td>洛克咖啡</td>
+					<td>60</td>
+					<td>透明</td>
+					<td>672</td>
+					<td>99%</td>
+					<td><input type="button" value="加入购物车" onclick="b3()" /></td>
+				</tr>
+				<tr>
+					<td>闲情咖啡</td>
+					<td>100</td>
+					<td>蓝色</td>
+					<td>8937</td>
+					<td>95%</td>
+					<td><input type="button" value="加入购物车" onclick="b4()" /></td>
+				</tr>
+				<tr>
+					<td>深红咖啡</td>
+					<td>70</td>
+					<td>红色</td>
+					<td>482</td>
+					<td>100%</td>
+					<td><input type="button" value="加入购物车" onclick="b5()" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="d1">购物车</div>
+		<table border="1px" bordercolor="#D5D5D5" cellpadding="10px" cellspacing="0" align="center">
+			<thead>
+				<tr>
+					<th width="200px">商品</th>
+					<th width="100px">单价(元)</th>
+					<th width="200px">数量</th>
+					<th width="100px">金额(元)</th>
+					<th width="100px">删除</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+			<tfoot>
+				<td colspan="3">总计</td>
+				<td colspan="2"></td>
+			</tfoot>
+		</table>
+		<br />
+		<br />
+		<div class="jiesuan-border">
+			<a class="jiesuan" href="#">结算</a>
+		</div>
+		<script type="text/javascript">
+			var tr = document.getElementsByTagName("tr");
+			var tb = document.getElementsByTagName("tbody");
+			var tf = document.getElementsByTagName("tfoot");
+			var i = 0;
+
+			function a1() {
+				console.log(tb[1].childNodes)
+				var tri = tr[i].childNodes;
+				var tr1 = document.createElement("tr");
+				var tbc = tb[1].childNodes;
+				var flag = true;
+				var q;
+				var goodname = tri[1].innerHTML;
+				for (var p = 1; p < tbc.length; p++) {
+					console.log(tbc)
+					console.log(goodname);
+					console.log(p);
+					if (goodname == tbc[p].childNodes[0].innerHTML) {
+						flag = false;
+						q = p;
+						break;
+					}
+				}
+				if (flag) {
+					var td1 = document.createElement("td");
+					td1.innerHTML = tri[1].innerHTML;
+					tr1.appendChild(td1);
+					var td2 = document.createElement("td");
+					td2.innerHTML = tri[3].innerHTML;
+					tr1.appendChild(td2);
+					var td3 = document.createElement("td");
+					td3.innerHTML = "<input type='button' value='-' onclick='c(this.parentNode,-1)'/>1<input type='button' value='+' onclick='c(this.parentNode,1)'/>";
+					tr1.appendChild(td3);
+					var td4 = document.createElement("td");
+					td4.innerHTML = td2.innerHTML;
+					tr1.appendChild(td4);
+					var td2 = document.createElement("td");
+					td2.innerHTML = "<input type=\"button\" value=\"删除 \" onclick='d(this)'/>";
+					tr1.appendChild(td2);
+					tb[1].appendChild(tr1);
+					c2();
+				} else {
+					console.log(tbc[p].childNodes[2].childNodes);
+					console.log(tbc[p].childNodes[2]);
+					c(tbc[p].childNodes[2], 1);
+				}
+			}
+
+			function b1() {
+				i = 1;
+				a1();
+			}
+
+			function b2() {
+				i = 2;
+				a1();
+			}
+
+			function b3() {
+				i = 3;
+				a1();
+			}
+
+			function b4() {
+				i = 4;
+				a1();
+			}
+
+			function b5() {
+				i = 5;
+				a1();
+			}
+
+			function c(btn, num) {
+				var num1 = parseInt(btn.innerText);
+				if (num1 + num > 0) {
+					btn.childNodes[1].nodeValue = num1 + num;
+					c1(btn.parentNode);
+					c2();
+				} else {
+					d(btn.childNodes[0]);
+				}
+			}
+
+			function c1(btn) {
+				var a = parseInt(btn.childNodes[1].innerHTML);
+				var b = parseInt(btn.childNodes[2].innerText);
+				btn.childNodes[3].innerHTML = a * b;
+			}
+
+			function c2() {
+				var c2 = 0;
+				for (var y = 1; y < tb[1].childNodes.length; y++) {
+					c2 += parseInt(tb[1].childNodes[y].childNodes[3].innerHTML);
+				}
+				console.log(tf[0].childNodes[1].childNodes);
+				console.log(c2);
+				tf[0].childNodes[1].childNodes[2].innerHTML = c2;
+			}
+
+			function d(btn) {
+				var del = btn.parentNode.parentNode;
+				del.parentNode.removeChild(del);
+				c2();
+			}
+		</script>
+		
+		</div>
+	</body>
+</html>

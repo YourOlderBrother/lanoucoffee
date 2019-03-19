@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+	</head>
+
+	<body>
+		<form class="form1" action="/success" method="post">
+			<input type="text" value="用户名" name="cusAccount"/>
+			<input type="password"  value="密码" name="cusPassword"/>
+			<p class="message">111</p>
+			<input type="button" onclick="login()" value="提交" />
+		</form>
+		<script type="text/javascript">
+			function login(){
+				$.ajax({
+					type:"get",
+					data:$(".form1").serialize(),
+					url:"http://localhost:8090/login/login",
+					async:true,
+					dataType : "json",
+					success:function(date){
+						
+						var identify=date["identify"];
+						console.log(identify);
+						var message=date["message"];
+						console.log(message);
+						if(identify==="false"){
+							console.log(2);
+							
+							$(".message").html(message);
+						}else{
+							window.location.href="http://localhost:8090/main/main"
+						}
+					}
+					
+				});
+			};
+			
+		</script>
+		<script type="text/javascript" src="../JS/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+
+	</body>
+
+</html>

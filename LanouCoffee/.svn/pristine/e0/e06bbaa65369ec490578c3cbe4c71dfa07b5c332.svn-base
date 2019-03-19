@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper>
+  <cache-ref namespace="com.lanou.dao.AdminDao"/>
+  
+<insert id="addAdmin" parameterType="Admin">
+insert into admin (adm_account,adm_password,adm_name) values
+(#{adm.admAccount},#{adm.admPassword},#{adm.admName})
+</insert>
+<delete id="deleteAdmin" parameterType="int">
+delete from admin where adm_account=#{adm.admAccount}
+</delete>
+<update id="updateAdmin" parameterType="Admin">
+update admin set adm_password=#{adm.admPassword},adm_name=#{adm.admName} where adm_account = #{adm.admAccount}
+</update>
+<select id="queryAdmin" parameterType="int" resultType="Admin">
+select *from admin where adm_account=#{adm.admAccount}
+</select>
+<select id="queryAll" resultType="list">
+select*from admin
+</select>
+  
+</mapper>

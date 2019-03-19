@@ -1,0 +1,10 @@
+package com.lanou.model;
+
+public class Coffee {
+	private Integer cof_id;//商品ID
+	private String cof_name;//商品名
+	private String cof_kind;//商品类
+	private String cof_introduce;//商品简介
+	private Double cof_price;//价格
+	private String cof_img;//图片
+}

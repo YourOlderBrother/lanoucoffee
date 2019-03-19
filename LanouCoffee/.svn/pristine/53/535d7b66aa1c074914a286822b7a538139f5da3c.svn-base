@@ -1,0 +1,73 @@
+package com.lanou.model;
+
+public class Customer {
+	private Integer cusId;//客户的id
+	private Integer cusAccount;//客户的账户(手机号)
+	private String cusPassword;//客户的密码
+	private String cusName;//客户的姓名
+	private String cusSex;//客户的性别
+	private String cusAddress;//客户的地址
+	
+	public Customer() {
+		super();
+	}
+
+	public Customer(Integer cusAccount, String cusPassword, String cusName, String cusSex, String cusAddress) {
+		super();
+		this.cusAccount = cusAccount;
+		this.cusPassword = cusPassword;
+		this.cusName = cusName;
+		this.cusSex = cusSex;
+		this.cusAddress = cusAddress;
+	}
+
+	public Integer getCusId() {
+		return cusId;
+	}
+
+	public void setCusId(Integer cusId) {
+		this.cusId = cusId;
+	}
+
+	public Integer getCusAccount() {
+		return cusAccount;
+	}
+
+	public void setCusAccount(Integer cusAccount) {
+		this.cusAccount = cusAccount;
+	}
+
+	public String getCusPassword() {
+		return cusPassword;
+	}
+
+	public void setCusPassword(String cusPassword) {
+		this.cusPassword = cusPassword;
+	}
+
+	public String getCusName() {
+		return cusName;
+	}
+
+	public void setCusName(String cusName) {
+		this.cusName = cusName;
+	}
+
+	public String getCusSex() {
+		return cusSex;
+	}
+
+	public void setCusSex(String cusSex) {
+		this.cusSex = cusSex;
+	}
+
+	public String getCusAddress() {
+		return cusAddress;
+	}
+
+	public void setCusAddress(String cusAddress) {
+		this.cusAddress = cusAddress;
+	}
+	
+
+}

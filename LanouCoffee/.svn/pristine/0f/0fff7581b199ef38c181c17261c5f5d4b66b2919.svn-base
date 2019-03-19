@@ -1,0 +1,36 @@
+package com.lanou.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lanou.model.OrderDetails;
+import com.lanou.service.OrderDetailsService;
+
+@RestController
+@RequestMapping("/details")
+public class OrderDetailsController {
+	@Autowired
+	private OrderDetailsService detSer;
+
+	@RequestMapping("/addDet")
+	public void addDetails(OrderDetails det) {
+		detSer.addDetails(det);
+	}
+
+	@RequestMapping("/updateDet")
+	public void updateDetails(OrderDetails det) {
+		detSer.updateDetails(det);
+	}
+
+	@RequestMapping("/queryDet")
+	public void queryDetails(Integer detId) {
+		detSer.queryDetails(detId);
+	}
+
+	@RequestMapping("/queryAll")
+	public void queryAll() {
+		detSer.queryAll();
+	}
+
+}

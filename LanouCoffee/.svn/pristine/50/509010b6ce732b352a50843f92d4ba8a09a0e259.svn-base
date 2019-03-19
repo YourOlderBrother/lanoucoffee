@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>lanoucoffee后台管理</title>
+<link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../CSS/background.css" />
+<script type="text/javascript" src="../JS/jquery-3.1.1.min.js"></script>
+<script src="../JS/bootstrap.min.js" type="text/javascript"
+	charset="utf-8"></script>
+</head>
+<body>
+	<div class="head">
+		<p class="title">lanoucoffee后台管理</p>
+		<span class="login">
+			<form class="form1">
+				<input type="text" placeholder="请输入管理员用户名" class="input1" name="admAccount"/> <input
+					type="password" placeholder="请输入管理员密码" class="input1" name="admPassword"/> <input
+					type="button" value="登录" class="input2" onclick="login()"/>
+			<p class="warning" style="color:red"></p>
+			</form>
+		</span> <a href="/back/exit?url=/back/home" class="logout">退出登录</a>
+	</div>
+	<div class="mid">
+		<ul class="nav nav-tabs">
+			<li><a class="tab1">当前进行订单</a></li>
+			<li><a href="#">订单管理</a></li>
+			<li><a href="#">用户管理</a></li>
+			<li><a href="#">咖啡管理</a></li>
+			<li><a href="#">管理员管理</a></li>
+			<li><a href="#">今日统计</a></li>
+		</ul>
+		<div class="console"></div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	$(function() {
+		$.ajax({
+					type : "get",
+					url : "/back/check",
+					async : false,
+					dataType : "json",
+					success : function(data) {
+						if (data["key"] === "true") {
+							var index = "<p class='name-login'>&nbsp&nbsp&nbsp"
+									+ data["name"]
+									+ ",欢迎登陆</p>";
+							$(".form1").html(index);
+							$(".logout").css("visibility", "visible");
+							$(".mid").css("visibility", "visible");
+						}
+					}
+				});
+	});
+	function login(){
+		if($(".input1").val==""){
+			$(".warning").html("请填写完整！");
+		}else{
+			$.ajax({
+				type : "get",
+				data : $(".form1").serialize(),
+				url : "/back/login",
+				async : true,
+				dataType : "json",
+				success : function(date) {
+					var identify = date["identify"];
+					var message = date["message"];
+					if (identify === "false") {
+						$(".warning").html(message);
+					} else {
+						window.location.href = "/back/home"
+					}
+				}
+			});
+		}
+	}
+	$(".tab1").click(function(){
+		$.ajax({
+			type : "get",
+			url : "/back/tab1",
+			async : true,
+			dataType : "json",
+			success : function(date) {
+				var arr = date.list;
+				var father=$(".console");
+				father.append("<th>订单编号</th><th>")
+				
+				for(var i=0;i<arr.length;i++){
+					
+				}
+				
+			}
+		});
+		
+	})
+</script>
+
+</html>

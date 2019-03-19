@@ -1,0 +1,28 @@
+package com.lanou.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lanou.dao.CustomerDao;
+import com.lanou.exception.NameException;
+import com.lanou.exception.UserNotExistException;
+import com.lanou.model.Customer;
+
+@Service
+public class LoginService {
+	@Autowired
+	private CustomerDao cusDao;
+
+	public boolean login(Customer cus) throws UserNotExistException, NameException {
+		Customer newCus = cusDao.queryCustomer(cus.getCusAccount());
+		if (newCus == null) {
+			throw new UserNotExistException();
+		} else if (!newCus.getCusPassword().equals(cus.getCusPassword())) {
+			throw new NameException();
+		} else {
+			return true;
+		}
+
+	}
+
+}

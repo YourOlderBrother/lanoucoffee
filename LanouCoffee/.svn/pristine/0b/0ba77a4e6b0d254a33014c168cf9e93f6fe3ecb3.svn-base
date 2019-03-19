@@ -1,0 +1,11 @@
+package com.lanou.model;
+
+public class Order {
+	private Integer ord_id;//订单编号
+	private Integer cus_id;//客户ID
+	private Integer adm_id;//管理员ID
+	private String cus_name;//客户姓名
+	private Integer cus_account;//客户电话(客户账号)
+	private String cus_address;//客户地址
+	private String ord_date;//订单日期
+}

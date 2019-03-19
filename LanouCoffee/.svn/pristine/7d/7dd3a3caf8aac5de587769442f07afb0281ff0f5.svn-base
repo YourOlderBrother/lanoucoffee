@@ -1,0 +1,9 @@
+package com.lanou.model;
+
+public class Admin {
+	private Integer adm_id;//管理员的id
+	private Integer adm_account;//管理员的账户(手机号)
+	private String adm_password;//管理员的密码
+	private String adm_name;//管理员的姓名
+	
+}

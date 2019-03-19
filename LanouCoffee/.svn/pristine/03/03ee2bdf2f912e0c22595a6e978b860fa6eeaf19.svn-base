@@ -1,0 +1,33 @@
+package com.lanou.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lanou.model.Order;
+import com.lanou.service.OrderService;
+
+@RestController
+@RequestMapping("/order")
+public class OrderController {
+	@Autowired
+	private OrderService ordSer;
+
+	@RequestMapping("/addOrd")
+	public void addOrder(Order ord) {
+		ordSer.addOrder(ord);
+	}
+
+	@RequestMapping("/queryOrd")
+	public Order queryOrder(Integer ordId) {
+		return ordSer.queryOrder(ordId);
+	}
+
+	@RequestMapping("/queryAll")
+	public List<Order> queryAll() {
+		return ordSer.queryAll();
+	}
+
+}

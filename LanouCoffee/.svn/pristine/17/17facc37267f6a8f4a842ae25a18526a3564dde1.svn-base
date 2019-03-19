@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Coffee house</title>
+		<link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/login.css" />
+	</head>
+
+	<body>
+		<div class="head-border">
+			<!--logo-->
+			<div class="logo-border">
+				<a href="#" class="logo-link">
+					<h1 class="logo"><strong>Lanou</strong>Coffee</h1>
+				</a>
+			</div>
+			<!--特色咖啡介绍-->
+			<div class="feature-border">
+				<a href="" class="feature-link">
+					<h1 class="feature">特色咖啡</h1>
+				</a>
+			</div>
+			<!--咖啡分类-->
+			<div class="menus-border">
+				<a href="" class="menus-link">
+					<h1 class="menus">咖啡分类</h1>
+				</a>
+			</div>
+			<!--个人信息-->
+			<div class="message-border">
+				<a href="" class="message-link">
+					<h1 class="message">个人信息</h1>
+				</a>
+			</div>
+			<!--帮助-->
+			<div class="help-border">
+				<a href="" class="help-link">
+					<h1 class="help">帮助</h1>
+				</a>
+			</div>
+
+		</div>
+		<div class="centre">
+			<div class="img-border">
+				<img src="../IMG/1.jpg" />
+			</div>
+			<div class="login">
+				<form class="form1" action="#" method="post">
+					<input type="text" name="cusAccount" class="i1" placeholder="邮箱/昵称/手机号码" onfocus="this.placeholder='' " onblur="this.placeholder=' 邮箱/昵称/手机号码 '" />
+					<p class="p1">请输入邮箱/昵称/手机号码</p>
+					<input type="password" name="cusPassword" class="i2" placeholder="密码" onfocus="this.placeholder=''" onblur="this.placeholder='密码 '"/>
+					<p class="p2">请填写长度为6-20个字符的密码</p>
+					<p class="exception"></p>
+					<input type="button" onclick="login()" value="登录" class="i3"/>
+					<a class="register" href="#">注册</a>
+				</form>
+				
+		
+
+	
+		</div>
+	</div>
+	<script type="text/javascript" src="../JS/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../JS/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+				$.ajax({
+					type:"get",
+					url:"/login/check",
+					async:true,
+					dataType : "json",
+					success:function(data){
+						var user=data["user"];
+						var cus=data["customer"];
+						console.log(data);
+						console.log(user);
+						
+						if(user==="checked"){
+							var name=cus["cusAccount"];
+							var index="<h3 class='name-login'>&nbsp&nbsp&nbsp"+name+",欢迎登陆</h3>"
+							$(".login").html(index);
+						}
+					}
+					
+				});
+			
+			
+		});
+		
+		
+		
+			function login(){
+				$.ajax({
+					type:"get",
+					data:$(".form1").serialize(),
+					url:"http://localhost:8090/login/login",
+					async:true,
+					dataType : "json",
+					success:function(date){
+						
+						var identify=date["identify"];
+						console.log(identify);
+						var message=date["message"];
+						console.log(message);
+						if(identify==="false"){
+							$(".exception").html(message);
+						}else{
+							window.location.href="/login/home"
+						}
+					}
+					
+				});
+			};
+			
+		</script>
+</body>
+</html>

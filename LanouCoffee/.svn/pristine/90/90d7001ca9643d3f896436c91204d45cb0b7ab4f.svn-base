@@ -1,0 +1,16 @@
+package com.lanou.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.lanou.model.Order;
+
+@Mapper
+public interface OrderDao {
+	public abstract Integer addOrder(Order ord);
+
+	public abstract Order queryOrder(Integer ordId);
+
+	public abstract List<Order> queryAll();
+}

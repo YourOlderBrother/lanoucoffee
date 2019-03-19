@@ -1,0 +1,83 @@
+package com.lanou.model;
+
+public class Order {
+	private Integer ordId;// 订单编号
+	private Integer cusId;// 客户ID
+	private Integer admId;// 管理员ID
+	private String cusName;// 客户姓名
+	private Integer cusAccount;// 客户电话(客户账号)
+	private String cusAddress;// 客户地址
+	private String ordDate;// 订单日期
+	private String goods;
+
+	public Order() {
+		super();
+	}
+
+	public Order(Integer cusId, Integer admId, String cusName, Integer cusAccount, String cusAddress, String ordDate) {
+		super();
+		this.cusId = cusId;
+		this.admId = admId;
+		this.cusName = cusName;
+		this.cusAccount = cusAccount;
+		this.cusAddress = cusAddress;
+		this.ordDate = ordDate;
+	}
+
+	public Integer getOrdId() {
+		return ordId;
+	}
+
+	public void setOrdId(Integer ordId) {
+		this.ordId = ordId;
+	}
+
+	public Integer getCusId() {
+		return cusId;
+	}
+
+	public void setCusId(Integer cusId) {
+		this.cusId = cusId;
+	}
+
+	public Integer getAdmId() {
+		return admId;
+	}
+
+	public void setAdmId(Integer admId) {
+		this.admId = admId;
+	}
+
+	public String getCusName() {
+		return cusName;
+	}
+
+	public void setCusName(String cusName) {
+		this.cusName = cusName;
+	}
+
+	public Integer getCusAccount() {
+		return cusAccount;
+	}
+
+	public void setCusAccount(Integer cusAccount) {
+		this.cusAccount = cusAccount;
+	}
+
+	public String getCusAddress() {
+		return cusAddress;
+	}
+
+	public void setCusAddress(String cusAddress) {
+		this.cusAddress = cusAddress;
+	}
+
+	public String getOrdDate() {
+		return ordDate;
+	}
+
+	public void setOrdDate(String ordDate) {
+		this.ordDate = ordDate;
+	}
+
+}

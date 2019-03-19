@@ -1,0 +1,40 @@
+package com.lanou.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import com.lanou.exception.NameException;
+import com.lanou.exception.UserNotExistException;
+
+@ControllerAdvice
+public class ControllerExceptionHandler {
+	@ExceptionHandler(NameException.class)
+	@ResponseBody
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+	public Map<String, String> nameException(NameException nameEx) {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("identify", "false");
+		map.put("message", nameEx.getMessage());
+
+		return map;
+	}
+
+	@ExceptionHandler(UserNotExistException.class)
+	@ResponseBody
+	public Map<String, String> userNotExistException(UserNotExistException uneEx) {
+		System.out.println(1);
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("identify", "false");
+
+		map.put("message", uneEx.getMessage());
+		System.out.println(map);
+		return map;
+	}
+
+}

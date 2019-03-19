@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper>
+  <cache-ref namespace="com.lanou.dao.CoffeeDao"/>
+  
+<insert id="addCoffee" parameterType="Coffee">
+insert into coffee (cof_name,cof_kind,cof_introduce,cof_price,cof_img) values
+(#{cof.cofName},#{cof.cofKind},#{cof.cofIntroduce},#{cof.cofPrice},#{cof.cofImg})
+</insert>
+<delete id="deleteCoffee" parameterType="string">
+delete from coffee where cof_name=#{cof.cofName}
+</delete>
+<update id="updateCoffee" parameterType="Coffee">
+update coffee set cof_kind=#{cof.cofKind},cof_introduce=#{cof.cofIntroduce},cof_price=#{cof.cofPrice},cof_img=#{cof.cofImg} where cof_name = #{cof.cofName}
+</update>
+<select id="queryCoffee" parameterType="string" resultType="Coffee">
+select *from coffee where cof_name=#{cof.cofName}
+</select>
+<select id="queryAll" resultType="list">
+select*from coffee
+</select>
+  
+</mapper>

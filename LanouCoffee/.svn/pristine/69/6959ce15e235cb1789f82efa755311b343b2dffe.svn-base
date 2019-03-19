@@ -1,0 +1,20 @@
+package com.lanou.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lanou.dao.CustomerDao;
+import com.lanou.model.Customer;
+
+@Service
+public class LoginService {
+	@Autowired
+	private CustomerDao cusDao;
+
+	public boolean login(Customer cus) {
+		Customer newCus = cusDao.queryCustomer(cus.getCusAccount());
+
+		return true;
+	}
+
+}

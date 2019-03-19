@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanou.dao.CustomerDao">
+<insert id="addCustomer">
+
+</insert>
+<update id="updateCustomer"></update>
+<select id="queryCustomer"></select>
+<select id="queryAll"></select>
+
+</mapper>

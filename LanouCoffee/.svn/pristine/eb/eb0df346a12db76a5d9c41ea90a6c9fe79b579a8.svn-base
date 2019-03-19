@@ -1,0 +1,14 @@
+package com.lanou.exception;
+
+public class UserNotExistException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2L;
+
+	public UserNotExistException() {
+		super("用户不存在");
+	}
+
+}

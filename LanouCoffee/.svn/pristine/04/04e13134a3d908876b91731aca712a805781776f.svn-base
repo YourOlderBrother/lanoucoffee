@@ -1,0 +1,20 @@
+package com.lanou.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.lanou.service.CustomerService;
+
+@Controller
+public class MainController {
+	@Autowired
+	private CustomerService cusSer;
+
+	@RequestMapping("/main")
+	public String toMain() {
+		System.out.println("1");
+		return "Main";
+	}
+
+}

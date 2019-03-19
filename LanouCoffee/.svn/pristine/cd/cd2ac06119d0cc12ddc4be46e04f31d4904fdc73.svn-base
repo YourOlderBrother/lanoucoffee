@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper>
+  <cache-ref namespace="com.lanou.dao.OrderDetailsDao"/>
+  
+<insert id="addDetails" parameterType="OrderDetails">
+insert into orderdetails (ord_id,cof_id,det_number) values
+(#{ord.ordId},#{cof.cofId},#{det.detNumber})
+</insert>
+<update id="updateDetails" parameterType="OrderDetails">
+update orderdetails set ord_id=#{ord.ordId},cof_id=#{cof.cofId},det_number=#{det.detNumber} where det_id = #{det.detId}
+</update>
+<select id="queryDetails" parameterType="int" resultType="OrderDetails">
+select *from orderdetails where det_id = #{det.detId}
+</select>
+<select id="queryAll" resultType="list">
+select*from orderdetails
+</select>
+  
+</mapper>

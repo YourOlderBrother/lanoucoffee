@@ -1,0 +1,39 @@
+package com.lanou.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lanou.model.Customer;
+import com.lanou.service.CustomerService;
+
+@RestController
+@RequestMapping("/cus")
+public class CustomerController {
+
+	@Autowired
+	private CustomerService cusSer;
+
+	@RequestMapping("/addCus")
+	public void addCustomer(Customer cus) {
+		cusSer.addCustomer(cus);
+	}
+
+	@RequestMapping("/updateCus")
+	public void updateCustomer(Customer cus) {
+		cusSer.updateCustomer(cus);
+	}
+
+	@RequestMapping("/queryCus")
+	public Customer queryCustomer(Integer cusAccount) {
+		return cusSer.queryCustomer(cusAccount);
+	}
+
+	@RequestMapping("/queryAll")
+	public List<Customer> queryAll() {
+		return cusSer.queryAll();
+	}
+
+}

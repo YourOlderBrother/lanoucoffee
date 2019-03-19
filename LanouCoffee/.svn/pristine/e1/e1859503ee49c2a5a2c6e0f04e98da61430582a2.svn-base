@@ -1,0 +1,7 @@
+package com.lanou.model;
+
+public class OrderDetails {
+	private Integer det_id;//订单编号
+	private Integer cus_id;//客户ID
+	private Integer cof_id;//商品ID
+}

@@ -1,0 +1,72 @@
+package com.lanou.model;
+
+public class Coffee {
+	private Integer cofId;//商品ID
+	private String cofName;//商品名
+	private String cofKind;//商品类
+	private String cofIntroduce;//商品简介
+	private Double cofPrice;//商品价格
+	private String cofImg;//商品图片
+	
+	public Coffee() {
+		super();
+	}
+
+	public Coffee(String cofName, String cofKind, String cofIntroduce, Double cofPrice, String cofImg) {
+		super();
+		this.cofName = cofName;
+		this.cofKind = cofKind;
+		this.cofIntroduce = cofIntroduce;
+		this.cofPrice = cofPrice;
+		this.cofImg = cofImg;
+	}
+
+	public Integer getCofId() {
+		return cofId;
+	}
+
+	public void setCofId(Integer cofId) {
+		this.cofId = cofId;
+	}
+
+	public String getCofName() {
+		return cofName;
+	}
+
+	public void setCofName(String cofName) {
+		this.cofName = cofName;
+	}
+
+	public String getCofKind() {
+		return cofKind;
+	}
+
+	public void setCofKind(String cofKind) {
+		this.cofKind = cofKind;
+	}
+
+	public String getCofIntroduce() {
+		return cofIntroduce;
+	}
+
+	public void setCofIntroduce(String cofIntroduce) {
+		this.cofIntroduce = cofIntroduce;
+	}
+
+	public Double getCofPrice() {
+		return cofPrice;
+	}
+
+	public void setCofPrice(Double cofPrice) {
+		this.cofPrice = cofPrice;
+	}
+
+	public String getCofImg() {
+		return cofImg;
+	}
+
+	public void setCofImg(String cofImg) {
+		this.cofImg = cofImg;
+	}
+	
+}

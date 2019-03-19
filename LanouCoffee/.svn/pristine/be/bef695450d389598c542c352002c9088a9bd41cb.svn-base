@@ -1,0 +1,48 @@
+package com.lanou.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.lanou.model.Coffee;
+import com.lanou.service.CoffeeService;
+
+@RestController
+@RequestMapping("/coffee")
+public class CoffeeController {
+	@Autowired
+	private CoffeeService cofSer;
+
+	@RequestMapping("/addCof")
+	public void addCoffee(Coffee cof) {
+		cofSer.addCoffee(cof);
+
+	}
+
+	@RequestMapping("/deleteAdm")
+	public void deleteCoffee(String cofName) {
+		cofSer.deleteCoffee(cofName);
+		;
+
+	}
+
+	@RequestMapping("/updateCof")
+	public void updateCoffee(Coffee cof) {
+		cofSer.updateCoffee(cof);
+
+	}
+
+	@RequestMapping("/queryCof")
+	public Coffee queryCoffee(String cofName) {
+		return cofSer.queryCoffee(cofName);
+
+	}
+
+	@RequestMapping("/queryAll")
+	public List<Coffee> queryAll() {
+		return cofSer.queryAll();
+
+	}
+}

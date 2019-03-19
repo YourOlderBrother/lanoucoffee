@@ -1,0 +1,19 @@
+package com.lanou.model;
+
+public class Customer {
+	private Integer cusId;// 客户的id
+	private Integer cusAccount;// 客户的账户(手机号)
+	private String cusPassword;// 客户的密码
+	private String cusName;// 客户的姓名
+	private String cusSex;// 客户的性别
+	private String cusAddress;// 客户的地址
+
+	public Integer getCusAccount() {
+		return cusAccount;
+	}
+
+	public void setCusAccount(Integer cusAccount) {
+		this.cusAccount = cusAccount;
+	}
+
+}

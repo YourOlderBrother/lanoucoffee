@@ -1,0 +1,89 @@
+*{
+			margin: 0px;
+			padding: 0px;
+		}
+		/*导航栏*/
+		.head-border{
+			border-radius: 5px;
+			background-color: #F3F3F3;
+			width: 1141px;
+			height: 63px;
+			margin: auto;
+			margin-top: 36px;
+		}
+		.logo-border{
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 4px;
+			/*background-color: red;*/
+			width: 220px;
+			float: left;
+			display: inline-block;
+		}
+		.feature-link{}
+		.logo-link,.feature-link,.menus-link,.message-link,.help-link{
+			text-decoration: none;
+		}
+		.logo{
+			color: #000000;
+			margin-left: 5px;
+			line-height: 63px;
+		}
+		.feature,.menus,.message,.help{
+			line-height: 63px;
+			/*color: white;*/
+			margin-left: 60px;
+		}
+		.logo,.menus,.message,.help{
+			color: white;
+		}
+		.feature-border,.message-border{
+			float: left;
+			/*background-color: #3D3D3D;*/
+			width: 220px;
+		}
+		.menus-border,.help-border{
+			float: left;
+			/*background-color: #454545;*/
+			width: 220px;
+		}
+		.help-border{
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 4px;
+			width: 260px;
+		}
+		.logo-border,.menus-border,.help-border{
+			background-color: #3D3D3D;
+		}
+		.message-border{
+			background-color: #454545;
+		}
+		.feature-border{
+			background-color: red;
+		}
+		/*中部内容区*/
+		.center-border{
+			width: 1141px;
+			height: 100%;
+			margin: auto;
+			margin-top: 20px;
+			
+		}
+		.coffee-border{
+			width: 560.5px;
+			float: left;
+			margin-left: 5px;
+			margin-top: 5px;
+			background-color: #F3F3F3;
+		}
+		.feature-one{
+			width: 180px;
+		}
+		.img-border{
+			display: inline-block;
+			float: left;
+		}
+		.feature-center{
+			margin-top: 20px;
+			margin-left: 40px;
+			float: left;
+		}

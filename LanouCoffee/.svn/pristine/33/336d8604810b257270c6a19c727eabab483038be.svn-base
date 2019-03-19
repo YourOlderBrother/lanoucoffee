@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../CSS/register.css" />
+		<script src="../JS/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="pop">
+			<div class="pop_title">
+				LanouCoffee用户注册
+			</div>
+			<div class="pop_con">
+				<form action="#" method="post">
+					<table class="pop_center">
+						<tr class="pop_center_h">
+							<td class="name">账号</td>
+							<td><input class="name_b" type="tel" placeholder="手机号" name="cusAccount" /></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="pop_center_h">
+							<td class="name">密码</td>
+							<td><input class="name_b" type="password" placeholder="密码" name="cusPassword" id="psw"/></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="pop_center_h">
+							<td class="name">姓名</td>
+							<td><input class="name_b" type="text" placeholder="姓名" name="cusName" id="xm"/></td>
+						</tr>
+						<tr class="pop_center_h">
+							<td class="name">性别</td>
+							<td class="sex-bg"><label for="boy">男</label>
+								<div class="sex-boy"><input type="radio" name="sex" id="boy" value="男" /></div>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <label for="girl">女</label>
+								<div class="sex-girl"><input type="radio" name="sex" id="girl" value="女" /></div>
+								<input type="text" name="cusSex" style="visibility: hidden;" class="sex" />
+							</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="pop_center_h">
+							<td class="name">所在地</td>
+							<td colspan="3">
+								武汉市&nbsp;&nbsp;&nbsp;江夏区&nbsp;&nbsp;&nbsp;(只在江夏区内配送)
+							</td>
+
+						</tr>
+						<tr class="pop_center_h">
+							<td class="name">详细地址</td>
+							<td colspan="3"><input class="name_b  name_dz" type="text" name="cusAddress" /></td>
+						</tr>
+
+					</table>
+					<div class="btn_bar">
+						<input type="button" value="确认注册" class="btn_qr" />
+						<p class="warning" style="color:red"></p>
+					</div>
+				</form>
+				<script type="text/javascript">
+					$(".sex-bg").click(function() {
+						var a = $("input:radio[name='sex']:checked").val();
+						$(".sex").val(a);
+					});
+					 $(".btn_qr").click(function(){
+						 console.log($(".name_b").val());
+						 if($(".name_b").val()===""){
+							 $(".warning").html("&nbsp&nbsp&nbsp&nbsp请填写用户名！");
+						 }else if($("#psw").val()==""){
+							 $(".warning").html("&nbsp&nbsp&nbsp&nbsp请填写密码！");
+						 }else if($("#xm").val()==""){
+							 $(".warning").html("&nbsp&nbsp&nbsp&nbsp请填写姓名！");
+						 }else if($(".sex").val()==""){
+							 $(".warning").html("&nbsp&nbsp&nbsp&nbsp请填写性别！");
+						 }else if($(".name_dz").val()==""){
+							 $(".warning").html("&nbsp&nbsp&nbsp&nbsp请填写地址！");
+						 }else{
+							  $.ajax({
+									type:"post",
+									url:"/login/registered",
+									data:$("form").serialize(),
+									async:true,
+									dataType : "json",
+									success:function(data){
+										if(data["key"]==="false"){
+											$(".warning").html("&nbsp&nbsp&nbsp&nbsp"+data["message"]);
+										}else{
+											window.location.href='/login/success';
+										}
+									}
+								}); 
+						 }
+						 
+						 
+						
+						
+					}); 
+				</script>
+			</div>
+		</div>
+	</body>
+
+</html>

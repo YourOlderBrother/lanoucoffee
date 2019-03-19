@@ -1,0 +1,146 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.head-border {
+	border-radius: 5px;
+	background-color: #F3F3F3;
+	width: 1141px;
+	height: 63px;
+	margin: auto;
+	margin-top: 36px;
+}
+
+.logo-border {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 4px;
+	background-color: red;
+	width: 220px;
+	float: left;
+	display: inline-block;
+}
+
+.logo-link,
+.feature-link,
+.menus-link,
+.message-link,
+.help-link {
+	text-decoration: none;
+}
+
+.logo {
+	color: #000000;
+	margin-left: 5px;
+	line-height: 63px;
+}
+
+.feature,
+.menus,
+.message,
+.help {
+	line-height: 63px;
+	color: white;
+	margin-left: 60px;
+}
+
+.feature-border,
+.message-border {
+	float: left;
+	background-color: #3D3D3D;
+	width: 220px;
+}
+
+.menus-border,
+.help-border {
+	float: left;
+	background-color: #454545;
+	width: 220px;
+}
+
+.help-border {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 4px;
+	width: 260px;
+}
+
+.centre {
+	/*border: 1px solid red;*/
+	width: 1141px;
+	height: 475px;
+	margin: auto;
+	margin-top: 12px;
+	border-radius: 5px;
+	background: url(../img/2.png) repeat scroll top left;
+	position: relative;
+}
+
+.img-border {
+	position: absolute;
+	top: 50px;
+	left: 100px;
+}
+
+.img-border img {}
+
+.login {
+	/*border: 1px solid red;*/
+	width: 300px;
+	height: 380px;
+	background-color: white;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
+.i1,.i2{
+	outline: none;
+	width: 220px;
+	height: 36px;
+	margin-left: 38px;
+	outline-color: #969696;
+	color: #969696;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	padding-left: 40px;
+	border:1px solid #e6e6e6;
+}
+.i1:focus{
+	color:#969696 ;
+	border:1px solid #969696;
+	
+}
+.i2:focus{
+	color:#969696 ;
+	border:1px solid #969696;
+}
+.i1{
+	margin-top:75px ;
+	background-image: url(../IMG/icon3.png);
+}
+.p1,.p2 {
+	font-size: 8px;
+	color: #86888B;
+	margin-left:37px ;
+	margin-top: 3px;
+	visibility: hidden;
+}
+.i1:focus+.p1 {
+	visibility: visible;
+}
+.i2 {
+	background-image: url(../IMG/icon4.png);
+}
+.i2:focus+.p2 {
+	visibility: visible;
+}
+.i3 {
+	margin-left: 38px;
+	margin-top: 15px;
+	width: 220px;
+	height: 45px;
+	color: white;
+	background-color: #FF2832;
+	border: none;
+	border-radius: 5px;
+	font-size: 21px;
+}
